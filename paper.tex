@@ -86,13 +86,53 @@ Tiergartenstr. 17, 69121 Heidelberg, Germany\\
 \section{Introduction}
 \label{introduction}
 
+Mention the hypothesis of the increase of position diversity and the random parameter.
+
 \section{Related Work}
 \label{related-work}
+
+\section{Preliminaries}
+\label{preliminaries}
+
+EvoSpace
 
 \section{Proposed Method}
 \label{proposed-method}
 
+The proposed method is designed to accelerate the convergence of the
+PSO algorithm. The hypothesis that was taken into consideration for this method is
+that extending PSO to a parallel architecture should increase the
+position diversity of the particles, and avoid premature convergence around a local
+optimum and should yield better results because of this, as explained
+by S. Cheng in \cite{cheng2013population}. Furthermore, each device in the parallel
+architecture that is searching for a solution is configured with a
+random set of parameters, as proposed by Y. Gong and
+A. Fukunaga in \cite{gong2011distributed}. The intention of this approach is to
+replace an optimization process of the parameters for a single instance of
+an evolutionary algorithm, and, instead, use a number of instances with
+different random parameters. As has been demonstrated in practice, as
+in \cite{garcia2014randomized}, \cite{gong2011distributed}, and
+\cite{tanabe2013evaluation}, this approach obtains similar results to
+an evolutionary algorithm with optimised parameters.
 
+The PSO algorithm was adapted to be integrated with the EvoSpace
+architecture \cite{garcia2015evospace}. EvoSpace enables different
+instances of PSO to be working on a single population, taking random
+samples of particles.
+
+\begin{figure}
+  \centering
+  \includegraphics[height=6.2cm]{pdf/distributed-pso}
+  \caption{}
+  \label{distributed-pso}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=6.2cm]{pdf/traditional-pso}
+  \caption{}
+  \label{traditional-pso}
+\end{figure}
 
 \section{Experiments}
 \label{experiments}
@@ -127,18 +167,8 @@ Tiergartenstr. 17, 69121 Heidelberg, Germany\\
 \cite{mcnabb2007parallel}
 \cite{venter2006parallel}
 \cite{koh2006parallel}
-
-% \begin{figure}
-% \centering
-% \includegraphics[height=6.2cm]{eijkel2}
-% \caption{One kernel at $x_s$ (\emph{dotted kernel}) or two kernels at
-% $x_i$ and $x_j$ (\textit{left and right}) lead to the same summed estimate
-% at $x_s$. This shows a figure consisting of different types of
-% lines. Elements of the figure described in the caption should be set in
-% italics, in parentheses, as shown in this sample caption.}
-% \label{fig:example}
-% \end{figure}xc
-
+\cite{cheng2013population}
+\cite{gong2011distributed}
 
 \bibliographystyle{splncs03}
 \bibliography{paper}
