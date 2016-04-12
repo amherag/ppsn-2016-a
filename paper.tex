@@ -80,6 +80,9 @@ Tiergartenstr. 17, 69121 Heidelberg, Germany\\
 
 \begin{abstract}
 
+%Mention why convergence in PSO is a problem and why position
+%diversity is essential to fix that problem.  
+
 \end{abstract}
 
 
@@ -110,12 +113,14 @@ random set of parameters, as proposed by Y. Gong and
 A. Fukunaga in \cite{gong2011distributed}. The intention of this approach is to
 replace an optimization process of the parameters for a single instance of
 an evolutionary algorithm, and, instead, use a number of instances with
-different random parameters. As has been demonstrated in practice, as
+different random parameters.  %Don't understand this - JJ
+As has been demonstrated in practice, as
 in \cite{garcia2014randomized}, \cite{gong2011distributed}, and
 \cite{tanabe2013evaluation}, this approach obtains similar results to
-an evolutionary algorithm with optimised parameters.
+an evolutionary algorithm with optimised parameters. % This probably
+                                % should go to state of the art - JJ
 
-The PSO algorithm was adapted to be integrated with the EvoSpace
+The PSO algorithm was adapted to integrate it with the EvoSpace
 architecture \cite{garcia2015evospace}. EvoSpace enables different
 instances of PSO to be working on a single population, taking random
 samples of particles.
@@ -146,7 +151,15 @@ samples of particles.
 \section{Future Work}
 \label{future-work}
 
+\section{Acknowledgements}
+
+We acknowledge support from 
+Spanish Ministry of Economy and Competitiveness and European Regional
+Development Fund (FEDER) under project EphemeCH
+(TIN2014-56494-C4-3-P and  
+from University of Granada, PROY-PP2015-06 (Plan Propio 2015 UGR)
 \section{Cites}
+
 
 \cite{garcia2015evospace}
 \cite{garcia2014randomized}
