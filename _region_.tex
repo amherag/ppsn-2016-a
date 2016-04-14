@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+\message{ !name(paper.tex)}%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % This is the LaTeX source for the instructions to authors using
 % the LaTeX document class 'llncs.cls' for contributions to
@@ -29,6 +29,9 @@
 \noindent\keywordname\enspace\ignorespaces#1}
 
 \begin{document}
+
+\message{ !name(paper.tex) !offset(-3) }
+
 
 \mainmatter  % start of an individual contribution
 
@@ -147,49 +150,33 @@ factors.
 
 As can be seen in Figure \ref{traditional-pso}, the particles in a
 traditional PSO algorithm always move according to the best particle
-(the red coloured particle, in this case) in each iteration, in terms
-of the pre-established cognitive and
+in each iteration, in terms of the pre-established cognitive and
 social factors. In contrast, one can see in Figure
 \ref{distributed-pso} how the proposed method works. Each circled
-group of particles have their positions updated in the plane according to the
+group of particles have their positions updated according to the
 social and cognitive factors of each PSO instance. In this case, each
 circled group of particles represents a random sample of particles
-taken from the population stored in EvoSpace. As was mentioned before,
-this method should increase the diversity of the particles in the
-population, and the randomized parameter setting should help particles
-converge to a solution as fast as a PSO with dynamic adaptation of its
-parameters.
+taken from the population stored in EvoSpace.
 
 \begin{figure}
   \centering
-  \includegraphics[height=4cm]{pdf/traditional-pso}
+  \includegraphics[width=5cm]{pdf/traditional-pso}
   \caption{}
   \label{traditional-pso}
 \end{figure}
 
+% Parallel
+Furthermore, the proposed method enables different physical
+devices to help in the evolutionary process, by gathering
+
+Diversity Formula
+
 \begin{figure}
   \centering
-  \includegraphics[height=4cm]{pdf/distributed-pso}
+  \includegraphics[width=5cm]{pdf/distributed-pso}
   \caption{}
   \label{distributed-pso}
 \end{figure}
-
-The diversity of the population of particles is calculated by using
-the formula presented in (\ref{formula-diversity})
-
-\begin{equation}
-  \label{formula-diversity}
-  D(P) = \frac{1}{|P|}\sum{i=1}^{|P|} \sqrt{}
-\end{equation}
-
-where blah blah blah %% finish formula first, and then explain
-
-Lastly, the proposed method enables different physical devices to get
-involved in the evolutionary process. A device can request a sample of
-the particles and it updates their positions for a certain number of
-generations. After finishing this process, the device returns the
-updated sample to the EvoSpace server. This architecture allows the
-physical devices to work asynchronously and in parallel.
 
 \section{Experiments}
 \label{experiments}
@@ -239,3 +226,5 @@ from University of Granada, PROY-PP2015-06 (Plan Propio 2015 UGR)
 \bibliography{paper}
 
 \end{document}
+
+\message{ !name(paper.tex) !offset(-230) }
